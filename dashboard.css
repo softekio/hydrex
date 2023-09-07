@@ -132,7 +132,7 @@ body{
     color:var(--color-black);
 }
 .sidebar{
-    margin-top:30px;
+    margin-top:60px;
     border-radius:30px;
     background-color:var(--color-primary);
     padding-top:10px;
@@ -142,7 +142,7 @@ body{
     margin-left:50px;
 }
 .sidebar2{
-    margin-top:30px;
+    margin-top:60px;
     height:500px;
     border-radius:30px;
     background-color:var(--color-primary);
