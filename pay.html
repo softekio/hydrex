@@ -1,12 +1,16 @@
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
-    <title>pay to continue</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
-</head>
-<body>
-<div class="menu-bar">
+      <link rel="stylesheet" href="pay.css">
+    <title>PayPal JS SDK Standard Integration</title>
+  </head>
+  <body>
+
+  <div class="menu-bar">
     <ul>
         <li class="active"><i class="fa fa-home"></i><a href="#">Home</a></li>
         <li><a href="#"><i class="fa fa-user"></i>About Us</a>
@@ -23,7 +27,7 @@
                 <ul>
                     <li><a href="mailto:hydroblack4@gamil.com">comment-games</a></li>
                     <li><a href="https://www.crazygames.com">try-games</a></li>
-                    <li><a href="mailto:hydroblack4@gamil.com">mail #your-game-site</a></li>
+                    <li><a href="mailto:hydroblack4@gamil.com">apply #your game</a></li>
                 </ul>
             </div>
         </li>
@@ -55,16 +59,20 @@
     </ul>
 </div>
 
-        <section class="form">
-            <form>
-                <div class="paypal"> 
-                   <a href="https://paypal.me/softek714?country.x=LS&locale.x=en_US">pay-here</a>
-                </div>
-            </form>
 
-            <div class="next">
-                <a href="#">Next</a>
-            </div>
-        </section>
-</body>
+
+    <div id="paypal-button-container" class="paypal-button-container">
+         <script src="https://www.paypal.com/sdk/js?client-id=AWVj_mTidedIIrmWhngTbcFngM6uFZjIMzEJBF_5Ewc_sYz4Da8jst4CNJB1qIFjnSIMtsdoXHxEeNtj&enable-funding=venmo&currency=USD"></script>
+    </div>
+    <p id="result-message" class="active2">
+        <h2>pls subscribe for more games</h2>
+        <a href="http://softekio.github.io/hydrex" class="active2">
+            <h2 class="item">return</h2>
+        </a>
+    </p>
+    <!-- Replace the "test" client-id value with your client-id -->
+    <script src="https://www.paypal.com/sdk/js?client-id=AWVj_mTidedIIrmWhngTbcFngM6uFZjIMzEJBF_5Ewc_sYz4Da8jst4CNJB1qIFjnSIMtsdoXHxEeNtj&enable-funding=venmo&currency=USD"></script>
+    <script src="app.js"></script>
+  </body>
 </html>
+
