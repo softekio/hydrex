@@ -6,6 +6,10 @@ body{
     margin-top:40px;
     margin-left:100px;
 }
+.paypal-buttons paypal-buttons-context-iframe paypal-buttons-label-subscribe paypal-buttons-layout-vertical{
+    margin-top:40px;
+    margin-left:100px;   
+}
 .active2{
     margin top:500px;
     margin-left:100px;
