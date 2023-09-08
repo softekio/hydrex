@@ -1,76 +1,22 @@
-
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
-      <link rel="stylesheet" href="pay.css">
-    <title>PayPal JS SDK Standard Integration</title>
-  </head>
-  <body>
-
-  <div class="menu-bar">
-    <ul>
-        <li class="active"><i class="fa fa-home"></i><a href="#">Home</a></li>
-        <li><a href="#"><i class="fa fa-user"></i>About Us</a>
-            <div class="sub-menu-1">
-                <ul>
-                    <li><a href="https://www.google.com/search?q=mission+of+all+gaming+companies&oq=mission+of+all+gaming+companies&aqs=chrome..69i57.11480j0j7&sourceid=chrome&ie=UTF-8">Mission</a></li>
-                    <li><a href="https://www.google.com/search?q=vision+of+all+gaming+companies&oq=vision+of+all+gaming+companies&aqs=chrome..69i57.37466j0j9&sourceid=chrome&ie=UTF-8">Vision</a></li>
-                    <li><a href="mailto:hydroblack4@gamil.com">contact-Team</a></li>
-                </ul>
-            </div>
-        </li>
-        <li><a href="#"><i class="fa fa-clone"></i>Service</a>
-        <div class="sub-menu-1">
-                <ul>
-                    <li><a href="mailto:hydroblack4@gamil.com">comment-games</a></li>
-                    <li><a href="https://www.crazygames.com">try-games</a></li>
-                    <li><a href="mailto:hydroblack4@gamil.com">apply #your game</a></li>
-                </ul>
-            </div>
-        </li>
-         <li><a href="#"><i class="fa fa-angellist"></i>Investors</a>
-            <div class="sub-menu-1">
-                <ul>
-                    <li><a href="https://paypal.me/softek714?country.x=LS&amp;locale.x=en_US">Donate</a></li>
-                    <li><a href="https://paypal.me/softek714?country.x=LS&amp;locale.x=en_US">Charity</a></li>
-                    <li><a href="https://paypal.me/softek714?country.x=LS&amp;locale.x=en_US">Support staff</a></li>
-                </ul>
-            </div>
-         </li>
-         <li><a href="#"><i class="fa fa-inr"></i>Pricing</a>
-            <div class="sub-menu-1">
-                <ul>
-                    <li><a href="https://www.google.com/search?q=free+priced+games&oq=free+priced+games&aqs=chrome..69i57.13885j0j4&sourceid=chrome&ie=UTF-8">free priced games</a></li>
-                    <li><a href="https://www.google.com/search?q=games+at+very+low+cost&oq=games+at+very+low+cost&aqs=chrome..69i57.38571j0j9&sourceid=chrome&ie=UTF-8">get games at low cost</a></li>
-                </ul>
-            </div>
-         </li>
-         <li><a href="tel:+233593948094"><i class="fa fa-edit"></i>contact</a>
-            <div class="sub-menu-1">
-                <ul>
-                    <li><a href="mailto:hydroblack4@gmail.com">mail-us</a></li>
-                    <li><a href="tel:+233593948094">call us</a></li>
-                </ul>
-            </div>
-         </li>
-    </ul>
-</div>
-
-
-
-    <div id="paypal-button-container" class="paypal-button-container"></div>
-    <p id="result-message" class="active2">
-        <h2>pls subscribe for more games</h2>
-        <a href="http://softekio.github.io/hydrex" class="active2">
-            <h2 class="item" class="active"><a href="softekio.github.io/hydrex/">next</h2>
-        </a>
-    </p>
-    <!-- Replace the "test" client-id value with your client-id -->
-    <script src="https://www.paypal.com/sdk/js?client-id=AWVj_mTidedIIrmWhngTbcFngM6uFZjIMzEJBF_5Ewc_sYz4Da8jst4CNJB1qIFjnSIMtsdoXHxEeNtj&enable-funding=venmo&currency=USD"></script>
-    <script src="app.js"></script>
-  </body>
-</html>
-
+<div id="paypal-button-container-P-8HR896006H8565520MT5WPWY"></div>
+<script src="https://www.paypal.com/sdk/js?client-id=AWVj_mTidedIIrmWhngTbcFngM6uFZjIMzEJBF_5Ewc_sYz4Da8jst4CNJB1qIFjnSIMtsdoXHxEeNtj&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+<script>
+  paypal.Buttons({
+      style: {
+          shape: 'pill',
+          color: 'gold',
+          layout: 'vertical',
+          label: 'subscribe'
+      },
+      createSubscription: function(data, actions) {
+        return actions.subscription.create({
+          /* Creates the subscription */
+          plan_id: 'P-8HR896006H8565520MT5WPWY',
+          quantity: 1 // The quantity of the product for a subscription
+        });
+      },
+      onApprove: function(data, actions) {
+        alert(data.subscriptionID); // You can add optional success message for the subscriber here
+      }
+  }).render('#paypal-button-container-P-8HR896006H8565520MT5WPWY'); // Renders the PayPal button
+</script>
